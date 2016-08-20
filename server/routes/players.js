@@ -27,8 +27,8 @@ router.route('/:id')
     })
   })
   .put((req, res) => {
-    Player.findByIdAndUpdate(req.params.id, {$set: req.body}, (err, updatedPlayer) => {
-      res.status(err ? 400 : 200 ).send(err || updatedPlayer);
+    Player.findByIdAndUpdate(req.params.id, {$set: req.body}, (err, playerToUpdate) => {
+      res.status(err ? 400 : 200 ).send(err || playertoUpdate);
     })
   })
 
