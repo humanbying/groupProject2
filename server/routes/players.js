@@ -28,8 +28,14 @@ router.route('/:id')
   })
   .put((req, res) => {
     Player.findByIdAndUpdate(req.params.id, {$set: req.body}, (err, playerToUpdate) => {
-      res.status(err ? 400 : 200 ).send(err || playertoUpdate);
-    })
+      if (err) {
+        return res.status(400).send(err);
+      }
+
+      Player.find({}, (err, players) => {
+        res.status(err ? 400: 200).send(err || players);
+      });
+    });
   })
 
 module.exports = router;
