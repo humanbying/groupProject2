@@ -35,12 +35,13 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(express.static('public'));
 
 // ROUTES
 app.use('/api', require('./routes/api'));
 
 app.get('*', (req, res) => {
-  let indexPath = path.join(__dirname, '../index.html');
+  let indexPath = path.join(__dirname, '../public/index.html');
   res.sendFile(indexPath);
 });
 
