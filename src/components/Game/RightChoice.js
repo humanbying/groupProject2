@@ -6,11 +6,13 @@ export default class RightChoice extends Component {
     super();
 
     this.nextQuestion = this.nextQuestion.bind(this);
+
+    setTimeout(this.nextQuestion, 3000);
   }
 
-  nextQuestion(e) {
-    e.preventDefault();
+  nextQuestion() {
     this.props.gameState("question");
+    this.props.changeTurn();
   }
 
   render() {
@@ -21,7 +23,8 @@ export default class RightChoice extends Component {
     } else {
       var playerTurn = "Player 2";
     }
-    
+
+
     return (
       <div>
         <h2>YOU ARE RIGHT!</h2>
@@ -30,9 +33,9 @@ export default class RightChoice extends Component {
         <h6>Player 2: {this.props.player2Score}</h6>
         <img src={imgPath} width="200px"/>
         <h1>{this.props.answer}</h1>
-        <button onClick={this.nextQuestion}>Next</button>
       </div>
     )
+
   }
 }
 

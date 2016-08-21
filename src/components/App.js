@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import SplashScreen from './Game/SplashScreen';
-import PlayerScreen from './Players/PlayerScreen';
-import RestaurantList from './RestaurantList';
 import Question from './Game/Question';
 import RightChoice from './Game/RightChoice';
 import WrongChoice from './Game/WrongChoice';
@@ -82,6 +80,7 @@ export default class App extends Component {
             playerTurn={this.state.turn}
             player1Score={this.state.player1Score}
             player2Score={this.state.player2Score}
+            changeTurn={this.changeTurn}
           />
         )
         break;
@@ -93,6 +92,7 @@ export default class App extends Component {
             playerTurn={this.state.turn}
             player1Score={this.state.player1Score}
             player2Score={this.state.player2Score}
+            changeTurn={this.changeTurn}
           />
         )
         break;

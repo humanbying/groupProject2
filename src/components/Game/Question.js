@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import Logo from './Logo';
 import PlayerActions from '../../actions/PlayerActions';
-import PlayerStore from '../../stores/PlayerStore';
 import RestaurantStore from '../../stores/RestaurantStore';
 
 export default class Question extends Component {
@@ -62,11 +61,9 @@ export default class Question extends Component {
     e.preventDefault();
     if (e.target.innerText === this.state.answer) {
       this.props.gameState("right");
-      this.props.changeTurn();
       this.props.addScore();
     } else {
       this.props.gameState("wrong");
-      this.props.changeTurn();
     }
   }
 
