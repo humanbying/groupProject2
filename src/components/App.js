@@ -4,6 +4,7 @@ import Question from './Game/Question';
 import RightChoice from './Game/RightChoice';
 import WrongChoice from './Game/WrongChoice';
 import GameEnd from './Game/GameEnd';
+import '../css/style.css'
 
 export default class App extends Component {
   constructor() {

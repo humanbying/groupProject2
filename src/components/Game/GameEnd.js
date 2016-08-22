@@ -16,11 +16,12 @@ export default class RightChoice extends Component {
 
     return (
       <div>
-        <h2>GAME OVER</h2>
-        <h2>Final Score:</h2>
-        <h4>Player 1: {this.props.player1Score}</h4>
-        <h4>Player 2: {this.props.player2Score}</h4>
-        <h1>{Winner} wins!</h1>
+        <h2 id = "verdict">GAME OVER!</h2>
+        <h2 id = "finalScore">Final Score:</h2>
+        <hr/>
+        <h4 id = "finalPlayers">Player 1: <b>{this.props.player1Score}</b></h4>
+        <h4 id = "finalPlayers">Player 2: <b>{this.props.player2Score}</b></h4>
+        <h1 id = "playerWins">{Winner} Wins!</h1>
       </div>
     )
   }

@@ -26,11 +26,15 @@ export default class WrongChoice extends Component {
 
     return (
       <div>
-        <h2>YOU ARE WRONG!</h2>
-        <h5>{playerTurn}'s Turn</h5>
-        <h6>Player 1: {this.props.player1Score}</h6>
-        <h6>Player 2: {this.props.player2Score}</h6>
-        <img src={imgPath} width="200px"/>
+        <h2 id = "verdict">YOU ARE WRONG!</h2>
+        <div id = "playerStats">
+          <h5 id = "playerTurn">{playerTurn}'s Turn</h5>
+          <h6 id = "playerOne">Player 1: <span id = "score">{this.props.player1Score}</span></h6>
+          <h6 id = "playerTwo">Player 2: <span id = "score">{this.props.player2Score}</span></h6>
+        </div>
+        <div id = "guessImage">
+        <img src={imgPath} max-height="350px" width="350px"/>
+        </div>
       </div>
     )
   }
