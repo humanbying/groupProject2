@@ -1,0 +1,128 @@
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:200,300,700,800';
+
+hr {
+  border-top: 20px solid #333333;
+  width:27%;
+  position:relative;
+  bottom:30px;
+}
+#splash {
+  font-family: 'Work Sans', sans-serif;
+  text-align:center;
+}
+#splashTitle {
+  margin-left: 50px;
+  position: relative;
+  top:40px;
+}
+
+#title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 120px;
+  font-weight: 200;
+  text-align:center;
+}
+
+#verdict {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 130px;
+  font-weight: 600;
+  text-align:center;
+}
+
+#playerWins {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 130px;
+  font-weight: 900;
+  text-align:center;
+}
+
+#finalScore {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 90px;
+  font-weight: 700;
+  text-align:center;
+}
+
+#finalPlayers {
+  position: relative;
+  left:695px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+
+#startGameButton {
+  font-size: 30px;
+  background-color: #FF4240;
+  font-weight: 500;
+  color: white;
+  border-style: none;
+  position:relative;
+  left:280px;
+  bottom:150px;
+  box-shadow: 1px 4px 0 0 #BB2144;
+}
+
+
+#playerStats {
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
+  bottom:120px;
+  margin-right: 40px;
+  text-align: right;
+}
+
+#playerTurn {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#playerOne {
+  font-weight: 400;
+  font-size:30px
+}
+
+#playerTwo {
+  font-weight: 400;
+  font-size:30px
+}
+
+#score {
+  font-weight: 700;
+}
+
+#guessImage {
+  bottom:40px;
+  position:relative;
+  text-align:center;
+}
+#choiceButtons {
+  background-color: #FF4240;
+  width: 320px;
+  font-size: 25px;
+  color:white;
+  border-style: none;
+  position: relative;
+  bottom: 80px;
+  margin: 0 105px;
+  text-align: center;
+  height:60px;
+  box-shadow: 1px 4px 0 0 #BB2144;
+}
+
+#choices {
+  width:100%;
+  position: fixed;
+  bottom: 0;
+  text-align:center;
+  border-style: none;
+}
+
+#answerPlacement {
+  font-family: 'Work Sans', sans-serif;
+  text-Align: center;
+  font-size: 50px;
+  font-weight: 900;
+}
