@@ -70,7 +70,11 @@ export default class Question extends Component {
 
   render() {
     const choices = _.shuffle(this.state.options).map(option => {
-      return <button  id = "choiceButtons" onClick={this.guess}>{option}</button>
+      return (
+        <div>
+          <button  id = "choiceButtons" onClick={this.guess}>{option}</button>
+        </div>
+      )
     })
 
     return (
