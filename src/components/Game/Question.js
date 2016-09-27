@@ -71,26 +71,27 @@ export default class Question extends Component {
   render() {
     const choices = _.shuffle(this.state.options).map(option => {
       return (
-        <div>
-          <button  id = "choiceButtons" onClick={this.guess}>{option}</button>
-        </div>
+        <button  id = "choiceButtons" onClick={this.guess}>{option}</button>
       )
     })
 
     return (
       <div>
-          <h2 id="title"><img src = "images/iconoQuizIcon.png" width = "120px"/>icono<b>Quiz</b></h2>
+        <h2 id="title"><img src = "images/iconoQuizIcon.png" width = "120px"/>icono<b>Quiz</b></h2>
+        <br />
         <div id = "playerStats">
           <h5 id = "playerTurn">{this.state.turn}'s Turn</h5>
           <h6 id = "playerOne">Player 1: <span id = "score">{this.props.player1Score}</span></h6>
           <h6 id = "playerTwo">Player 2: <span id = "score">{this.props.player2Score}</span></h6>
         </div>
+        <br />
+        <br />
         <div id = "guessImage">
           <Logo answer={this.state.answer}/>
         </div>
-        <div id = "choices">
+        <span id = "choices">
           {choices}
-        </div>
+        </span>
       </div>
     )
   }
