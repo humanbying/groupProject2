@@ -99,11 +99,5 @@ export default class App extends Component {
         break;
       }
     }
-    // return (
-    //   <div>
-    //     <h1>LogoQuest</h1>
-    //     <RestaurantList />
-    //   </div>
-    // )
   }
 }
