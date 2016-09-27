@@ -1,19 +1,20 @@
 {
   "name": "iconoquiz",
   "version": "1.0.0",
-  "description": "",
+  "description": "Game about matching icons with fast food chain names",
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./webpack.config.js",
-    "postinstall": "npm run build"
+    "postinstall": "webpack",
+    "build": "NODE_ENV='production' webpack",
+    "prod": "NODE_ENV='production' npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": "6.3.1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Danny Lim and Brian Ying",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.13.1",

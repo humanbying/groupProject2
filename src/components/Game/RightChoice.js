@@ -42,5 +42,3 @@ export default class RightChoice extends Component {
 
   }
 }
-
-//img src={this.props.answerId}

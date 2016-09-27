@@ -15,5 +15,3 @@ export default class Logo extends Component {
     )
   }
 }
-
-// img src={this.props.answerId}
