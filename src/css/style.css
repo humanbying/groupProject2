@@ -68,9 +68,10 @@ hr {
 
 #playerStats {
   font-family: 'Work Sans', sans-serif;
+  position: relative;
   bottom:120px;
   margin-right: 40px;
-  text-align: center;
+  text-align: right;
 }
 
 #playerTurn {
@@ -94,6 +95,7 @@ hr {
 
 #guessImage {
   bottom:40px;
+  position: relative;
   text-align:center;
 }
 
@@ -103,9 +105,9 @@ hr {
   font-size: 25px;
   color:white;
   border-style: none;
+  position: relative;
   bottom: 80px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 105px 10px 0;
   text-align: center;
   height:60px;
   box-shadow: 1px 4px 0 0 #BB2144;
