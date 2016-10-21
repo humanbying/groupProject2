@@ -15,9 +15,13 @@ export default class SplashScreen extends Component {
 
   render() {
     return (
-      <div id="splash">
-        <h2><img src="images/iconoQuizIcon.png"/><span id="title"><span id="splashTitle">icono<b>Quiz</b></span></span></h2>
-        <button className=".btn.raised" id="startGameButton"onClick={this.startGame}>start game</button>
+      <div className="container text-center" id="splash">
+        <div className="row text-center">
+          <h2><img src="images/iconoQuizIcon.png" width="200px"/><span id="title">icono<b>Quiz</b></span></h2>
+        </div>
+        <div className="row text-center">
+          <button className=".btn.raised startGameButton" onClick={this.startGame}>start game</button>
+        </div>
       </div>
     )
   }

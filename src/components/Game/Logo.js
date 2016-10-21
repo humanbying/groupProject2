@@ -11,10 +11,10 @@ export default class Logo extends Component {
     let imgPath = path.join(__dirname, `images/${this.props.answer}-black.png`);
 
     return (
-      <div className = "container">
-        <img src={imgPath} width="350px"/>
+      <div>
+        <img src={imgPath} width="350px" onClick={this.props.quit}/>
       </div>
     )
   }
-  
+
 }

@@ -29,17 +29,27 @@ export default class RightChoice extends Component {
     }
 
     return (
-      <div>
-        <h2 id="verdict">YOU ARE RIGHT!</h2>
-        <div id="playerStats">
-          <h5 id="playerTurn">{playerTurn}'s Turn</h5>
-          <h6 id="playerOne">Player 1: <span id = "score">{this.props.player1Score}</span></h6>
-          <h6 id="playerTwo">Player 2: <span id = "score">{this.props.player2Score}</span></h6>
+      <div className="container text-center">
+        <div className="row text-center">
+          <div className="col-sm-6 col-md-6 col-lg-6">
+            <h2 id="verdict">YOU ARE RIGHT!</h2>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-6">
+            <h5 id="playerTurn" className="playerStats">{playerTurn}'s Turn</h5>
+            <h6 id="playerOne" className="playerStats">Player 1: <span id = "score">{this.props.player1Score}</span></h6>
+            <h6 id="playerTwo" className="playerStats">Player 2: <span id = "score">{this.props.player2Score}</span></h6>
+          </div>
         </div>
-        <div id="guessImage">
-          <img  src={imgPath} max-height="350px" width="350px"/>
+        <div className="row text-center">
+          <div className="col-sm-12 col-md-12 col-lg-12">
+            <img src={imgPath} width="350px"/>
+          </div>
         </div>
-        <h1 id="answerPlacement">{this.props.answer}</h1>
+        <div className="row text-center">
+          <div className="col-sm-12 col-md-12 col-lg-12">
+            <h1 id="answerPlacement">{this.props.answer}</h1>
+          </div>
+        </div>
       </div>
     )
   }

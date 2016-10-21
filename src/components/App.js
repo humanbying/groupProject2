@@ -12,11 +12,11 @@ export default class App extends Component {
     super();
 
     this.state = {
-      gameState: "start",
+      gameState: 'start',
       turn: true,
       player1Score: 0,
       player2Score: 0,
-      answer: ""
+      answer: ''
     }
 
     // BIND FUNCTIONS TO LEXICAL THIS
@@ -24,6 +24,7 @@ export default class App extends Component {
     this.changeTurn = this.changeTurn.bind(this);
     this.changeState = this.changeState.bind(this);
     this.changeAnswer = this.changeAnswer.bind(this);
+    this.quit = this.quit.bind(this);
   }
 
   // TO ADD SCORE
@@ -52,11 +53,21 @@ export default class App extends Component {
     this.setState({ answer });
   }
 
+  quit() {
+    this.setState({
+      gameState: 'start',
+      turn: true,
+      player1Score: 0,
+      player2Score: 0,
+      answer: ''
+    })
+  }
+
   render() {
     // FIRST TO 5
     if (this.state.player1Score === 5 || this.state.player2Score === 5) {
       return (
-        <GameEnd player1Score={this.state.player1Score} player2Score={this.state.player2Score}/>
+        <GameEnd player1Score={this.state.player1Score} player2Score={this.state.player2Score} quit={this.quit}/>
       )
     } else {
       // SWITCH CASE FOR GAME STATES
@@ -76,6 +87,7 @@ export default class App extends Component {
             player1Score={this.state.player1Score}
             player2Score={this.state.player2Score}
             addScore={this.addScore}
+            quit={this.quit}
             />
           )
           break;
@@ -88,6 +100,7 @@ export default class App extends Component {
               player1Score={this.state.player1Score}
               player2Score={this.state.player2Score}
               changeTurn={this.changeTurn}
+              quit={this.quit}
             />
           )
           break;
@@ -100,6 +113,7 @@ export default class App extends Component {
               player1Score={this.state.player1Score}
               player2Score={this.state.player2Score}
               changeTurn={this.changeTurn}
+              quit={this.quit}
             />
           )
           break;
