@@ -7,6 +7,7 @@ export default class SplashScreen extends Component {
     this.startGame = this.startGame.bind(this);
   }
 
+  // ACTION TRIGGERD TO START GAME
   startGame(e) {
     e.preventDefault();
     this.props.gameState("question");
@@ -14,9 +15,9 @@ export default class SplashScreen extends Component {
 
   render() {
     return (
-      <div id = "splash">
-        <h2><img src = "images/iconoQuizIcon.png"/><span id="title"><span id = "splashTitle">icono<b>Quiz</b></span></span></h2>
-        <button className = ".btn.raised" id = "startGameButton"onClick={this.startGame}>start game</button>
+      <div id="splash">
+        <h2><img src="images/iconoQuizIcon.png"/><span id="title"><span id="splashTitle">icono<b>Quiz</b></span></span></h2>
+        <button className=".btn.raised" id="startGameButton"onClick={this.startGame}>start game</button>
       </div>
     )
   }

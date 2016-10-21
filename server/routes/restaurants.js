@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+// IMPORT RESTAURANT SCHEMA
 const Restaurant = require('../models/restaurant');
 
+// ROUTE FOR ALL RESTAURANTS
+// .get to get all restaurants
+// .post to add new restaurant
 router.route('/')
   .get((req, res) => {
     Restaurant.find({}, (err, restaurants) => {
@@ -15,6 +19,10 @@ router.route('/')
     })
   })
 
+// ROUTE FOR SPECIFIC RESTAURANTS
+// .get to get data for one restaurant
+// .delete to delete a restaurant
+// .put to edit a restaurant
 router.route('/:id')
   .get((req, res) => {
     Restaurant.findById(req.params.id, (err, restaurant) => {
@@ -31,7 +39,6 @@ router.route('/:id')
       if (err) {
         return res.status(400).send(err);
       }
-
       Restaurant.find({}, (err, restaurants) => {
         res.status(err ? 400: 200).send(err || restaurants);
       });

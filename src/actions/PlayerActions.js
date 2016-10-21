@@ -1,16 +1,8 @@
 import API from '../API';
 
+// ALL ACTIONS TRIGGERED BY PLAYER
 const PlayerActions = {
-  getAllPlayers: API.getAllPlayers,
-  createPlayer(player) {
-    API.createPlayer(player);
-  },
-  deletePlayer(id) {
-    API.deletePlayer(id);
-  },
-  updatePlayer(id, updatePlayer) {
-    API.updatePlayer(id, updatePlayer);
-  },
+  // RECEIVE ALL RESTAURANTS FROM DB
   getAllRestaurants: API.getAllRestaurants
 };
 
